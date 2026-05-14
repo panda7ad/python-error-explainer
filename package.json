@@ -1,0 +1,95 @@
+{
+  "name": "python-error-explainer",
+  "displayName": "Python Error Explainer",
+  "description": "Explains Python errors in plain English using a local AI model. No internet. No fixing for you — just understanding.",
+  "version": "0.0.1",
+  "publisher": "ADARSH PATEL",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "keywords": [
+    "python",
+    "error",
+    "beginner",
+    "ollama",
+    "learning"
+  ],
+  "activationEvents": [
+    "onLanguage:python"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pythonErrorExplainer.runFile",
+        "title": "Run Python File with Error Explainer",
+        "icon": "$(play)"
+      },
+      {
+        "command": "pythonErrorExplainer.checkSetup",
+        "title": "Python Error Explainer: Check Setup"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pythonErrorExplainer.runFile",
+        "key": "ctrl+shift+r",
+        "mac": "cmd+shift+r",
+        "when": "editorLangId == python"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "pythonErrorExplainer.runFile",
+          "when": "editorLangId == python",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Python Error Explainer",
+      "properties": {
+        "pythonErrorExplainer.ollamaModel": {
+          "type": "string",
+          "default": "phi3",
+          "description": "Ollama model to use",
+          "enum": [
+            "phi3",
+            "llama3.2",
+            "codellama",
+            "mistral"
+          ]
+        },
+        "pythonErrorExplainer.ollamaUrl": {
+          "type": "string",
+          "default": "http://localhost:11434",
+          "description": "Ollama server URL"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.74.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "icon": "img/icon.png",
+"repository": {
+  "type": "git",
+  "url": "https://github.com/panda7ad/python-error-explainer.git"
+}
+}
