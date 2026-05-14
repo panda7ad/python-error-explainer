@@ -61,6 +61,9 @@ This downloads a ~2.3 GB model to your computer. It only needs to happen once.
 ### Step 4 — You're done
 Open VS Code. Run your Python code. The extension will automatically explain any errors you encounter.
 
+![Demo](img/ss-arrow.png)
+
+![Output](img/output.png)
 
 
 ---
