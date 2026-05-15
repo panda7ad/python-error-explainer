@@ -2,7 +2,7 @@
   "name": "python-error-explainer",
   "displayName": "Python Error Explainer",
   "description": "Explains Python errors in plain English using a local AI model. No internet. No fixing for you — just understanding.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "publisher": "billgate00b",
   "engines": {
     "vscode": "^1.74.0"
