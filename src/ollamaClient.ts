@@ -13,6 +13,7 @@ follow these Hard rules:
 - Sentence 2: Why this specific error happened based on their code line.
 - Sentence 3: One hint about where to look, NOT what to change.
 - Sentence 4 (optional): A common cause beginners miss for this error type.
+- Sentence 5: Try to give the answer in points 
 - NEVER write any code.
 - NEVER say "you should change X to Y" or "the fix is".
 - Respond in plain text only. No markdown, no bullet points, no bold.`;
